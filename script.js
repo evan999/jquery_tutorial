@@ -2,7 +2,19 @@
 
 $(document).on("ready", function(){
     
+    $("*").on("click", function(){
+        
+       console.log(e.target);
+       console.log("The event type is: " + e.type); 
+       console.log("X coordinate of the event is: " + e.pageX);
+       console.log("Y coordinate of the event is: " + e.pageY);
+       e.stopPropagation();
+       
+    });
     
+    element.on("click", function(e){
+        
+    });
     
 });
 
