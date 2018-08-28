@@ -1,14 +1,13 @@
-$("header .wrapper").removeClass("wrapper");
-$("header > div").addClass("wrapper");
-
-var button = $("#lead-banner a");
-
-button[0].onclick = function(){
-    $("#point-of-sale").toggleClass("open");
-    return false;
-};
+var myLis = $("#points-of-sale li");
 
 
+
+myLis.on("click", function(){
+    
+    $(this).css({"background": "pink"});
+    
+    myLis.off("click");
+});
 
 
 
