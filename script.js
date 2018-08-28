@@ -1,14 +1,23 @@
-element.on("click", function(){
+// Signal page to load changes before page is fully loaded
+
+$(document).on("ready", function(){
+    
+    
     
 });
 
-$("#lead-banner").dblclick(function(){
-    alert("you double clicked me");
-    $("#lead-banner").off("dblclick");
+$(document).ready(function(){
+ 
 });
 
-$("#lead-banner").on("dblclick", function(){
-    alert("you double clicked me");
+// Wait for element to fully load before changes apply
+
+$(window).on("load", function(){
+    
+});
+
+$(window).onload(function(){
+    
 });
 
 
