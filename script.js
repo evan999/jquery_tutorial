@@ -1,15 +1,27 @@
-// Adding content
+$("section").wrap("<div>");
 
-var tweet = "<div style='margin: 20px 0; padding: 10px;"
-+ "background: #eee'>The big fight live: Ham vs Cheese: </div>";
+$("section").unwrap();
 
-$("#tweets div").append(tweet);
-$("#tweets div").prepend(tweet);
-$("#tweets p").before(tweet);
-$("#tweets p").after(tweet);
-$("#tweets div").html(tweet);
+$("section").wrapAll("<div>");
 
-$("#tweets div p").text(tweet);
+var wrapper = "<div class='wrapper'>";
+var button = $(".button");
+var wrapped = true;
+
+button[0].onclick = function(){
+    if(wrapped){
+        $("section").unwrap();
+        wrapped = false;
+        button.text("Wrap");
+    }
+    else{
+        $("section").wrapAll(wrapper);
+        wrapped = true;
+        button.text("Unwrap");
+    }
+};
+
+
 
 
 
