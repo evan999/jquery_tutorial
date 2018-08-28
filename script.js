@@ -1,17 +1,12 @@
-console.log($("#social-nav").css("position"));
-$("#social-nav").css("top", "-200px").css("left", "100px");
+$("header .wrapper").removeClass("wrapper");
+$("header > div").addClass("wrapper");
 
-var myObject = {
-    "height": "40",
-    "speed" : "100"
-}
+var button = $("#lead-banner a");
 
-$("#social-nav").css({
-    "top": "-400px",
-    "left" : "150px",
-    "opacity" : "0.5",
-    "border-top" : "4px solid red"
-});
+button[0].onclick = function(){
+    $("#point-of-sale").toggleClass("open");
+    return false;
+};
 
 
 
