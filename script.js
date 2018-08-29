@@ -1,25 +1,12 @@
 $(document).ready(function(){
     
-    var allQuotes = $("blockquote");
-    var currentQuote = 0;
+    var items = $("#points-of-sale li");
     
-    function changeQuote(){
-       // $(allQuotes[currentQuote]).fadeOut(200)
+    items.on("click", function(){
+       
+       $(this).find("p").slideToggle(500);
         
-       $(allQuotes[currentQuote]).fadeIn(200, function(){
-             if(currentQuote == allQuotes.length - 1){
-                currentQuote = 0;
-             }
-             else{
-                currentQuote++;
-             }
-        });
-        
-    }
-    
-    var quoteTimer = setInterval(changeQuote, 3000);
-    
- 
+    });
 
 });
 
