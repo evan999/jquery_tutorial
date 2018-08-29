@@ -1,17 +1,30 @@
 $(document).ready(function(){
     
-    $("img[alt=map]").on("click", function(){
+    $(".slide-button-up").on("click", function(){
         
-      //  $(this).hide(1000).show(1000);
-    //    $(this).toggle(1000);
-      $("section > h2").toggle(1000);  
+        $("#lead-banner").slideUp(100);
         
         
     });
     
+    $(".slide-button-down").on("click", function(){
+        
+        $("#lead-banner").slideDown(4000, function(){
+            alert("animation complete");
+        });
+        
+        
+    });
+    
+    $(".slide-button-up").on("click", function(){
+        
+        $("#lead-banner").toggle(1000, function(){
+            alert("animation complete");
+        });
+        
+        
+    });
 })
-
-
 
 
 
