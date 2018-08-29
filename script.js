@@ -1,30 +1,27 @@
 $(document).ready(function(){
     
-    $(".slide-button-up").on("click", function(){
-        
-        $("#lead-banner").slideUp(100);
-        
-        
-    });
+    var allQuotes = $("blockquote");
+    var currentQuote = 0;
     
-    $(".slide-button-down").on("click", function(){
+    function changeQuote(){
+       // $(allQuotes[currentQuote]).fadeOut(200)
         
-        $("#lead-banner").slideDown(4000, function(){
-            alert("animation complete");
+       $(allQuotes[currentQuote]).fadeIn(200, function(){
+             if(currentQuote == allQuotes.length - 1){
+                currentQuote = 0;
+             }
+             else{
+                currentQuote++;
+             }
         });
         
-        
-    });
+    }
     
-    $(".slide-button-up").on("click", function(){
-        
-        $("#lead-banner").toggle(1000, function(){
-            alert("animation complete");
-        });
-        
-        
-    });
-})
+    var quoteTimer = setInterval(changeQuote, 3000);
+    
+ 
+
+});
 
 
 
